@@ -22,7 +22,7 @@ def another_try(player_card,computer_card):
                   
                 print(f"Your final hand: {player_card}, final score: {sum(player_card)}" )
                 print(f"Computer's final hand:{computer_card}, final score: {sum(computer_card)}")
-                print("You lose")
+                print("You lose the game")
                 start_game()
             else :
                 player_card.append(rd.choice(cards))
@@ -37,7 +37,7 @@ def another_try(player_card,computer_card):
             print(f"Your final hand: {player_card}, final score: {sum(player_card)}" )
             print(f"Computer's final hand:{computer_card}, final score: {sum(computer_card)}")
             if sum(player_card)<=21 and  sum(player_card)>sum(computer_card):
-                print("You win")
+                print("You win the game")
                 start_game()
             else :
                 print("You lose")
