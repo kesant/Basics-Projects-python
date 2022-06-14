@@ -21,29 +21,32 @@ def shows_info(persona1,persona2):
     print(f"Against B: {persona2[0]}, a {persona2[2]}, from {persona2[3]}.")
 def choose_winner(jugador_1,jugador_2,choice):
     if choice=="a" and jugador_1[1]>jugador_2[1]:
-        return True
+        return True,1
     elif choice=="b" and jugador_1[1]<jugador_2[1]:
-        return True
+        return True,2
     else :
-        return False
+        return False,0
 
     
 
-def main(score=0):
-
+def main(score=0,jugador="a"):
     player1,player2=jugadores()
+    if jugador!="a":
+        player1=jugador
     shows_info(player1,player2)
     terminador=True
-
     while terminador:
         player_choice=input("Who has more followers? Type 'A' or 'B': ").lower()
-        game_winner=choose_winner(player1,player2,player_choice)
+        game_winner,ganador=choose_winner(player1,player2,player_choice)
         if game_winner==True:
             system("cls")
             print(art.logo) 
             score+=1
             print(f"You're right! Current score:{score}")
-            main(score)
+            if ganador==1:
+                main(score,player2)
+            else:
+                main(score,player1)
         else :
             system("cls")
             print(art.logo) 
