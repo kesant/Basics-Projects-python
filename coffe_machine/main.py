@@ -87,6 +87,7 @@ def  promtp():
             check2 = check_transaction(users_options)
             if check2:
                 update_resources(users_options)
+                print(f"dispending a {users_options}")
                 promtp()
             else:
                 promtp()
