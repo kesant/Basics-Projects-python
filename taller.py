@@ -1,4 +1,4 @@
-from wsgiref.validate import validator
+
 
 
 ldatos = ['JUAN PEREZ|QUITO|1200', 'MARIA RICAURTE|LOJA|2300', 'RENE RIVAS|IBARRA|1000', 'RICARDO LEON|CUENCA|1500',
