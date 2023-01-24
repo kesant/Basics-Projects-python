@@ -1,0 +1,13 @@
+LENGTH_S = 6
+LENGTH_M = 8
+LENGTH_L = 12
+LENGTH_XL = 16
+
+EASY = 0
+MEDIUM = 1
+HARD = 2
+HARD_PLUS = 3
+
+LETTER = 69        # 69%
+PUNCTUATION = 90   # 21%
+DIGIT = 100        # 10%
